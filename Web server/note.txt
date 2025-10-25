@@ -3,6 +3,37 @@ key points :
 
 1. web server holo ekta software jeta server e thake . server e thake bolte client jekhane request kore setaii server or web server and sei web server sei request er against e response dey . web server http protocol use kore thake . tai amra bolte pari web server holo sei server jeta specially browser er jonno banano . web server mainly text, image , audio , video serve kore thake 
 
+🌐 Web Server (ওয়েব সার্ভার) কী?
+
+🔹 Web Server হলো এমন একটি software (সফটওয়্যার) যা server কম্পিউটারে ইনস্টল করা থাকে এবং ক্লায়েন্ট (যেমন ব্রাউজার) থেকে আসা HTTP request গ্রহণ করে এবং তার উপযুক্ত HTTP response পাঠায়।
+
+🔹 এটি HTTP বা HTTPS প্রোটোকল ব্যবহার করে client এবং server-এর মধ্যে যোগাযোগ স্থাপন করে।
+
+🔹 সহজভাবে বললে — যখন আমরা কোনো ওয়েবসাইটে URL লিখে search করি, তখন browser সেই URL অনুযায়ী web server-কে request পাঠায়, এবং web server সেই পেজের data (HTML, CSS, JS, image, video ইত্যাদি) পাঠিয়ে দেয়।
+
+🔹 Web Server মূলত browser-এর জন্য বিশেষভাবে ডিজাইন করা software, যার কাজ হচ্ছে ওয়েব কনটেন্ট নিরাপদ ও দ্রুতভাবে সার্ভ করা।
+
+🔹 এটি সাধারণত text, image, audio, video, HTML file ইত্যাদি content serve করে থাকে।
+
+🔹 জনপ্রিয় কিছু Web Server উদাহরণ:
+
+Apache HTTP Server
+
+Nginx
+
+Microsoft IIS (Internet Information Services)
+
+LiteSpeed Web Server
+
+🔹 Web Server static content serve করতে পারে, আবার dynamic content serve করার জন্য backend server-এর (যেমন Node.js, PHP ইত্যাদি) সাথে কাজ করে।
+
+
+
+
+----------------------------------------------------- 1 -----------------------------------------------
+
+
+
 
 
 2. server 2 prokar . Static Server and Dynamic Server 
