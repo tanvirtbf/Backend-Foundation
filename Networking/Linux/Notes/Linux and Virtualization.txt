@@ -1,0 +1,5 @@
+Key points : 
+
+1. kernel holo software and hardware er moddhe communication er ekta way . kernel c language e banano ekta software jeta hardware er sathe communicate korte pare. 
+
+2. Linux ki ? Linux holo Open source os kernel . mane Linux ekta kernel. 
