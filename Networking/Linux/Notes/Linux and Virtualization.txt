@@ -3,3 +3,5 @@ Key points :
 1. kernel holo software and hardware er moddhe communication er ekta way . kernel c language e banano ekta software jeta hardware er sathe communicate korte pare. 
 
 2. Linux ki ? Linux holo Open source os kernel . mane Linux ekta kernel. 
+
+3. amra jokhon AWS or onno kono company theke server kini, tokhon tara amk ekta virtual machine provide kore jekhane 2core or 3core or 4core erokom core diye thake and kichu ram rom diye thake . aita actually jevabe hoy seta holo : dhori AWS er ekta primary Hardware ase jekhane hajar hajar RAM , Core and Space thake . Hypervisor er maddhome Hardware er upor base kore partition kora hoy and prottekta single partition ke virtual machine bola hoy . jekhane limit deya thake core, ram rom er . and sei partition or virtual machine amra peye thaki . 
