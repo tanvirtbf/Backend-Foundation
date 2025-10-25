@@ -2,3 +2,31 @@ key points :
 
 
 1. web server holo ekta software jeta server e thake . server e thake bolte client jekhane request kore setaii server or web server and sei web server sei request er against e response dey . web server http protocol use kore thake . tai amra bolte pari web server holo sei server jeta specially browser er jonno banano . web server mainly text, image , audio , video serve kore thake 
+
+
+
+2. server 2 prokar . Static Server and Dynamic Server 
+🧱 1. Static Server:
+
+Static Server এমন এক ধরনের সার্ভার যা fixed (অপরিবর্তনশীল) ফাইল যেমন HTML, CSS, JS, Image ইত্যাদি সরাসরি ক্লায়েন্টকে পাঠায় — কোনো প্রকার processing ছাড়াই।
+এই ধরনের সার্ভারে backend logic বা database থাকে না।
+
+Example:
+GitHub Pages
+Netlify
+Vercel (যখন শুধু static site deploy করা হয়)
+Apache বা Nginx server দিয়ে host করা simple HTML site
+Static server মূলত “read-only” ওয়েবসাইটের জন্য আদর্শ।
+
+2. Dynamic Server:
+Dynamic Server এমন এক ধরনের সার্ভার যা user request অনুযায়ী real-time এ data generate করে পাঠায়। এখানে backend code (যেমন Node.js, PHP, Python ইত্যাদি) এবং database (যেমন MySQL, MongoDB) ব্যবহার করা হয়।
+
+Example:
+Facebook, YouTube, Amazo
+Node.js + Express server
+PHP + Laravel server
+Dynamic server ব্যবহার করা হয় যেখানে user interaction, login system, database data প্রদর্শন ইত্যাদি প্রয়োজন।
+
+সংক্ষেপে:
+Static Server = Fixed content serve করে 🧾
+Dynamic Server = User অনুযায়ী content change করে ⚡
