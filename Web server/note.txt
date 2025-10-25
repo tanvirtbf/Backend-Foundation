@@ -206,5 +206,20 @@ Multi-Threaded Server-এর বাস্তব উদাহরণ হলো —
 ------------------------------------- 6 -------------------------------------------
 
 
+Multi-Threaded Server — Deep Explanation (বাংলায়)
+
+একটি Multi-Threaded Server হলো এমন এক ধরনের সার্ভার, যেখানে একাধিক client request একসাথে (concurrently) হ্যান্ডেল করার জন্য সার্ভার একাধিক Thread ব্যবহার করে। প্রতিটি Thread আসলে একটি ছোট execution unit, যা একই process-এর ভেতরে চলে এবং সার্ভারের main program memory, variables, এবং resources শেয়ার করে। এর মানে, সার্ভার একসাথে অনেকগুলো client request parallelভাবে process করতে পারে, এবং এর জন্য একাধিক আলাদা process তৈরি করতে হয় না।
+
+উদাহরণস্বরূপ, ধরো একটি সার্ভার একসাথে ১০০ জন user-এর request পাচ্ছে — যদি সেটা Single-Threaded হয়, তাহলে একবারে মাত্র একটিই request handle করতে পারবে; অন্য request গুলোকে queue তে অপেক্ষা করতে হবে। কিন্তু Multi-Threaded Server হলে, প্রতিটি request এর জন্য আলাদা thread তৈরি হবে বা Thread Pool থেকে thread নেওয়া হবে, এবং সব request প্রায় একসাথে process হবে। ফলে সার্ভারের responsiveness ও throughput অনেক বেড়ে যায়।
+
+এই পদ্ধতির সবচেয়ে বড় সুবিধা হলো efficiency — কারণ সব Thread একই memory space শেয়ার করে বলে context switching অনেক দ্রুত হয় এবং নতুন process তৈরি করার overhead লাগে না। পাশাপাশি CPU utilization বাড়ে, idle সময় কমে, আর high-load server-গুলো অনেক smoothভাবে চলে।
+
+তবে এর কিছু চ্যালেঞ্জও আছে — যেহেতু সব Thread একই memory শেয়ার করে, তাই data consistency বজায় রাখা খুব গুরুত্বপূর্ণ। যদি একাধিক Thread একই সময় কোনো shared variable পরিবর্তন করে, তাহলে race condition, deadlock, বা synchronization সমস্যা হতে পারে। তাই Multi-Threaded Server তৈরি করার সময় thread-safe code লেখা এবং proper locking mechanism (যেমন mutex, semaphore) ব্যবহার করা খুব জরুরি।
+
+Multi-Threaded Server-এর বাস্তব উদাহরণ হলো — Apache HTTP Server (multi-threaded mode), Java Web Server (Tomcat), C++-based socket servers, এমনকি Node.js Worker Threads ব্যবহারের ক্ষেত্রেও multi-threaded concurrency আনা যায়।
+
+সংক্ষেপে বলা যায়, Multi-Threaded Server একাধিক Thread ব্যবহার করে parallelভাবে client request হ্যান্ডেল করে, যার ফলে সার্ভার দ্রুত, responsive, এবং efficient হয়। তবে এতে synchronization এবং thread-safety maintain করাই সবচেয়ে বড় চ্যালেঞ্জ।
+
+
 
 
